@@ -1,0 +1,39 @@
+package day26;
+
+import java.util.Arrays;
+
+public class ToCharArrayPractice {
+
+    public static void main(String[] args) {
+
+        //2 additional String methods related to Array
+        //toCharArray(), another is split(bySomething)
+
+        String survey="Complete B15 Online 1 Month Survey";
+
+        char[] surveyChars=survey.toCharArray();
+
+        //System.out.println(Arrays.toString(surveyChars));
+
+        for (char each:surveyChars) {
+
+            System.out.println(each);
+
+        }
+
+        //just for fun use while loop
+
+        int x=0;
+        while (x<surveyChars.length) {
+            System.out.println("each char is "+surveyChars[x]);
+            x++;
+        }
+
+        //for fun do while
+        int y=0;
+        do {
+            System.out.println("each char is "+surveyChars[y]);
+            y++;
+        } while(y<surveyChars.length);
+    }
+}
