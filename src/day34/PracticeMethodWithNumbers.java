@@ -1,6 +1,6 @@
-package day33;
+package day34;
 
-public class TaskFromAkbar {
+public class PracticeMethodWithNumbers {
 
     public static void main(String[] args) {
 
