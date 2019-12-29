@@ -1,5 +1,7 @@
 package day34;
 
+import java.security.PublicKey;
+
 public class MethodOverLoadingIntro {
 
     public static void main(String[] args) {
@@ -19,12 +21,16 @@ public class MethodOverLoadingIntro {
         System.out.println("----------------------");
 
         //what is method overloading?
-        //using same name and different parameter for methods
+        //using same name and different parameter for different methods
         //to reuse the name for similar actions
+        //IT DOES NOT CONCERN RETURN TYPE AND ACCESS MODIFIER
+
+        //method name+parameter list=method signature
 
         sayHello();
         sayHello("Merve");
         sayHello(100);
+        System.out.println(sayHello("Muge","Orman"));
 
     }
     public static void sayHello() {
@@ -36,6 +42,10 @@ public class MethodOverLoadingIntro {
 
     public static void sayHello(int num) {
         System.out.println("Hello, "+num);
+    }
+
+    public static String sayHello(String firstName, String lastName) {
+        return "Hello "+firstName+" "+lastName;
     }
 
 }
