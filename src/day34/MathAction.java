@@ -30,6 +30,7 @@ public class MathAction {
 
         Calculator_v2.calculate('+',1,2);
         Calculator_v2.calculate('*',2,2);
+        //click on calculate, optiona bas bi de space e bas, vola! methodun icini goruyorsun
 
     }
 }
