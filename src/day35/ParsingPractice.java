@@ -1,6 +1,6 @@
 package day35;
 
-public class GroceryCalculation {
+public class ParsingPractice {
 
     public static void main(String[] args) {
 
