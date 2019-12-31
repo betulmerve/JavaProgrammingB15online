@@ -9,7 +9,7 @@ public class StringToIntegerParsing {
 
         String strNum="100";
         int num=Integer.parseInt(strNum);
-        System.out.println(num);
+        System.out.println("num = " + num);
 
         String empID="FB-457";
 
@@ -24,7 +24,13 @@ public class StringToIntegerParsing {
          * */
 
         int id=Integer.parseInt(empID.split("-")[1]);
-        System.out.println(id);
+        System.out.println("id = " + id);
+
+        //I have String called twoNumbers
+        String twoNumbers="100,600";
+        //I want you to add them and give the result
+        int twoNumAdd=Integer.parseInt(twoNumbers.split(",")[0])+Integer.parseInt(twoNumbers.split(",")[1]);
+        System.out.println("twoNumAdd = " + twoNumAdd);
 
 
     }
