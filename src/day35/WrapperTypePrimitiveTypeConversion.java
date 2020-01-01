@@ -18,6 +18,9 @@ public class WrapperTypePrimitiveTypeConversion {
 
         int num3=Integer.parseInt("200");
 
+        //bu ikisinin arasindaki farki interviewde sorabilirler anlatabilirsin
+        //sen ikisini yaptiginda da calisiyor birinde olmasi gerekeni yapiyorsun
+        //digerinde de auto-boxing veya auto-unboxing ile caresine bakiliyor
 
         /*
          * Integer.parseInt("numberHere")
