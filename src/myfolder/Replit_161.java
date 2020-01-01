@@ -16,20 +16,27 @@ public class Replit_161 {
     public static void isPalindrome(int num){
         //WRITE YOUR CODE HERE
 
-        int digit1,digit2,digit3,digit4;
+//       String strNum= String.valueOf(num);
+//
+//       String palindrome="";
+//        for (int x = strNum.length()-1; x >=0; x--) {
+//            palindrome=palindrome+strNum.charAt(x);
+//
+//        }
+//
+//        if (strNum.equals(palindrome)) {
+//            System.out.println(true);
+//        } else {
+//            System.out.println(false);
+//        }
 
-        digit1=num/1000;
-        digit2=(num%1000)/100;
-        digit3=(num%100)/10;
-        digit4=num%10;
-
-
-
-        if (digit1==digit4 && digit2==digit3) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
+        int reversed=0;
+        int numo=num;
+        while (num>0){
+            reversed=reversed*10+num%10;
+            num/=10;
         }
+        System.out.println(reversed==numo);
 
     }
 }
