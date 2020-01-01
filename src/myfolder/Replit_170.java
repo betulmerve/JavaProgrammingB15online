@@ -3,7 +3,7 @@ package myfolder;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ZombieReplit {
+public class Replit_170 {
 
     public static void main(String[] args) {
 
