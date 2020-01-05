@@ -7,6 +7,7 @@ public class WarmUpTaskFromMuhtar {
         System.out.println(removeDup("aaabbbccc"));
         System.out.println(frequencyOfChars("AAABBBCCC"));
 
+
     }
 
     /*
@@ -70,4 +71,5 @@ public class WarmUpTaskFromMuhtar {
             
 
         }
+
 }
