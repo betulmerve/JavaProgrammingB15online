@@ -22,7 +22,8 @@ public class ArrayListRemoveItemPractice {
         System.out.println("lst = " + lst);
 
         //bu value remove ediyor
-        lst.remove(new Integer(2));
+        //lst.remove(new Integer(2));
+        lst.remove(Integer.valueOf(2));
         System.out.println("lst = " + lst);
 
     }

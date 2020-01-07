@@ -1,4 +1,4 @@
-package day36;
+package day37;
 
 public class MethodOverloadingWithWrapper {
 
@@ -6,7 +6,7 @@ public class MethodOverloadingWithWrapper {
 
 
         printNum(3);
-        printNum(new Integer(4));
+        printNum(Integer.valueOf(100));
     }
 
     //it is always looking for exact match!
