@@ -70,5 +70,26 @@ public class PriceListUpdateValuePractice {
         }
         System.out.println("doubled pricelist ="+priceList);
 
+        // Cut the price into half if the price is more than 20$
+
+        for (int x = 0; x < priceList.size(); x++) {
+
+            if (priceList.get(x)>=20) {
+
+                priceList.set(x,priceList.get(x)/2);
+            }
+
+        }
+
+        System.out.println("half price ="+priceList);
+
+        // swap the first value with the last value
+
+        double temp=priceList.get(0);
+        priceList.set(0, priceList.get(priceList.size()-1));
+        priceList.set(priceList.size()-1,temp);
+
+        System.out.println("priceList = " + priceList);
+
     }
 }
