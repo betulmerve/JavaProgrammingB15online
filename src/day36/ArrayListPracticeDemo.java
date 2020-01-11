@@ -20,8 +20,8 @@ public class ArrayListPracticeDemo {
         lst.add("Arya Stark");
 
         //lst.add(index location to insert , String object);
-        lst.add(1,"Bran Stark");
-        lst.add(3,"Tony Stark");
+        lst.add(1, "Bran Stark");
+        lst.add(3, "Tony Stark");
 
 
         // to see what's inside array (yep , just print it out directly)
@@ -40,11 +40,11 @@ public class ArrayListPracticeDemo {
         System.out.println("\nfirst item lst.get(0) = " + lst.get(0));
         System.out.println("second item lst.get(1) = " + lst.get(1));
         System.out.println("last item of any ArrayList object \n\t lst.get(lst.size()-1) ="
-                + lst.get( lst.size()-1 ));
+                + lst.get(lst.size() - 1));
 
         //Replace the value of element at certain index
         //lst.set(index, newValue)
-        lst.set(3,"Rob Stark");
+        lst.set(3, "Rob Stark");
         System.out.println("\nAfter replacing element with new value at index 3 lst = \n\t" + lst);
 
         //remove an element by it's value
@@ -59,15 +59,15 @@ public class ArrayListPracticeDemo {
 
         // check if an element exists in the list
         //lst.contains( element )
-        System.out.println("\nlst.contains(\"Rob Stark\") = " + lst.contains("Rob Stark") );
+        System.out.println("\nlst.contains(\"Rob Stark\") = " + lst.contains("Rob Stark"));
 
         // get the index of an element in the list
         //lst.indexOf(element) ;
-        System.out.println("lst.indexOf(\"Arya Stark\") = " + lst.indexOf("Arya Stark") );
+        System.out.println("lst.indexOf(\"Arya Stark\") = " + lst.indexOf("Arya Stark"));
 
         // get the last index of an element in the list
         //lst.lastIndexOf(element) ;
-        System.out.println("lst.lastIndexOf(\"Jon Snow\") = " + lst.lastIndexOf("Jon Snow") );
+        System.out.println("lst.lastIndexOf(\"Jon Snow\") = " + lst.lastIndexOf("Jon Snow"));
 
         System.out.println("\niterating over a list using for loop");
         for (int i = 0; i < lst.size(); i++) {
@@ -101,7 +101,7 @@ public class ArrayListPracticeDemo {
         System.out.println("\nGetting array out of lst");
         String[] arrOutOfList = lst.toArray(new String[0]);
         System.out.println("Array object we got from the list using lst.toArray(new String[0]) \n\t"
-                + Arrays.toString(arrOutOfList) );
+                + Arrays.toString(arrOutOfList));
 
         // turning your array into an List
         // this method will generate unmodifiable list
@@ -117,77 +117,15 @@ public class ArrayListPracticeDemo {
         //lst.retainAll(another list)
 
         // Sorting an Array in ascending natural order
-        lst.sort( Comparator.naturalOrder() );
+        lst.sort(Comparator.naturalOrder());
         System.out.println("After Sorting in low to high (natural) order = \n\t" + lst);
-        lst.sort( Comparator.reverseOrder() );
+        lst.sort(Comparator.reverseOrder());
         System.out.println("After Sorting in high to low (reverse) order = \n\t" + lst);
         // DOES THIS WORK FOR ARRAY ? SURE IT DOES
         // overloaded version of sort method accept a comparator
-        Arrays.sort( arrOutOfList,Comparator.reverseOrder() );
-
-//        System.out.println(isAnagram("listen","silent");
-//        System.out.println(isAnagram("earth", "heart"));
-//        System.out.println(isAnagram("star","rats"));
-//        System.out.println(isAnagram("java","bye"));
-
-//        ArrayList<Boolean> arr=new ArrayList<>(Arrays.asList(false,true,true));
-//        repeatAL(arr);
-
+        Arrays.sort(arrOutOfList, Comparator.reverseOrder());
 
     }
-
-
-    public static void repeatAL(ArrayList<Boolean> result) {
-        ArrayList<Boolean> newArr=new ArrayList<>(result);
-        newArr.addAll(result);
-        System.out.println(newArr);
-
-    }
-
-    public static String extractNum(String s) {
-
-        String clean="";
-        for (int x = 0; x < s.length(); x++) {
-
-            if (Character.isDigit(s.charAt(x))) {
-                clean=clean+s.charAt(x);
-            }
-        }
-
-        return clean;
-    }
-//
-//    public static String reverseLetters(String word){
-//        //TODO
-//
-//        String reversed="";
-//        for (int x = word.length()-1; x >=0; x++) {
-//
-//            if (Character.isLetterOrDigit(word.charAt(x))) {
-//                char temp;
-//
-//                temp=word.charAt(x);
-//                word.charAt(x)=word.charAt(word.length()-(x+1));
-//                word.charAt(word.length()-1)=temp;
-//
-//            }
-//        }
-//
-//        return word;
-//    }
-
-//    public static ArrayList<Integer> twoTimes(ArrayList<Integer> lst) {
-//        ArrayList<Integer> newLst=new ArrayList<>();
-//
-//
-//        for (int x = 0; x < lst.size(); x=x+2) {
-//
-//            newLst.set(x,lst.get(x));
-//            newLst.set(x+1,lst.get(x));
-//
-//        }
-//
-//        return newLst;
-//    }
 }
+
 

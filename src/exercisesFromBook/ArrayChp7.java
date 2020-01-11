@@ -59,4 +59,18 @@ public class ArrayChp7 {
 
 
     }
+
+
+    public static String reverseLetters(String word){
+        //TODO
+
+        for(int x=0; x<word.length(); x++) {
+            if(Character.isLetterOrDigit(word.charAt(x))) {
+
+
+            }
+        }
+
+        return word;
+    }
 }
