@@ -1,5 +1,6 @@
 package day36;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -124,6 +125,69 @@ public class ArrayListPracticeDemo {
         // overloaded version of sort method accept a comparator
         Arrays.sort( arrOutOfList,Comparator.reverseOrder() );
 
+//        System.out.println(isAnagram("listen","silent");
+//        System.out.println(isAnagram("earth", "heart"));
+//        System.out.println(isAnagram("star","rats"));
+//        System.out.println(isAnagram("java","bye"));
+
+//        ArrayList<Boolean> arr=new ArrayList<>(Arrays.asList(false,true,true));
+//        repeatAL(arr);
+
 
     }
+
+
+    public static void repeatAL(ArrayList<Boolean> result) {
+        ArrayList<Boolean> newArr=new ArrayList<>(result);
+        newArr.addAll(result);
+        System.out.println(newArr);
+
+    }
+
+    public static String extractNum(String s) {
+
+        String clean="";
+        for (int x = 0; x < s.length(); x++) {
+
+            if (Character.isDigit(s.charAt(x))) {
+                clean=clean+s.charAt(x);
+            }
+        }
+
+        return clean;
+    }
+//
+//    public static String reverseLetters(String word){
+//        //TODO
+//
+//        String reversed="";
+//        for (int x = word.length()-1; x >=0; x++) {
+//
+//            if (Character.isLetterOrDigit(word.charAt(x))) {
+//                char temp;
+//
+//                temp=word.charAt(x);
+//                word.charAt(x)=word.charAt(word.length()-(x+1));
+//                word.charAt(word.length()-1)=temp;
+//
+//            }
+//        }
+//
+//        return word;
+//    }
+
+//    public static ArrayList<Integer> twoTimes(ArrayList<Integer> lst) {
+//        ArrayList<Integer> newLst=new ArrayList<>();
+//
+//
+//        for (int x = 0; x < lst.size(); x=x+2) {
+//
+//            newLst.set(x,lst.get(x));
+//            newLst.set(x+1,lst.get(x));
+//
+//        }
+//
+//        return newLst;
+//    }
 }
+
