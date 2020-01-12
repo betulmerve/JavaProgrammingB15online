@@ -25,6 +25,16 @@ public class Car {
         System.out.println("Age of car is: "+ (currentYear-year) );
     }
 
+    //create a method to change the color
+
+    public void changeColorTo(String newColor) {
+        // Write bunch of code here to validate
+        // user is actually passing correct color
+        // for example  Red , Blue is valid color
+        //              ABC,FGH is not valid color
+        color=newColor;
+    }
+
 
 
 

@@ -16,6 +16,7 @@ public class Garage {
         c1.color="White";
         c1.goForward();
         c1.printCarAge();
+        c1.changeColorTo("Blue");
 
         System.out.println(c1.year+" | "+c1.model+" | "+ c1.make+" | "+ c1.color);
 
@@ -26,6 +27,7 @@ public class Garage {
         c2.color="Red";
         c2.goForward();
         c2.printCarAge();
+
 
         System.out.println(c2.year+" | "+c2.model+" | "+ c2.make+" | "+ c2.color);
 
