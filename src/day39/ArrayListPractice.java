@@ -128,7 +128,8 @@ public class ArrayListPractice {
 
         System.out.println("dysonDetail = " + dysonDetail);
 
-
+        productLst.set(indexOfDyson,dysonDetail);
+        System.out.println("productLst = " + productLst);
 
 
 //         * Task 8 : Count the items prices more than average price.
@@ -150,6 +151,19 @@ public class ArrayListPractice {
 //         * Task 9 : Remove all the items has more than average price.
 
         System.out.println("task9");
+
+//        for (int i = 0; i < productLst.size(); i++) {
+//
+//            double price = Double.parseDouble(productLst.get(i).split(",")[1]);
+//            if (price > avg) {
+//
+//                productLst.remove(i);
+//                --i;
+//            }
+//
+//        }
+//        System.out.println("productLst count  after removing = " + productLst.size());
+
         ArrayList<String> newArr=new ArrayList<>();
         for (int x = 0; x < productLst.size(); x++) {
 
@@ -179,25 +193,15 @@ public class ArrayListPractice {
             String items=productLst.get(x).split(",")[0];
             itemNames.add(items);
 
-        }
-        System.out.println(itemNames);
-
-
-        for (int x = 0; x < productLst.size(); x++) {
-
             double price=Double.parseDouble(productLst.get(x).split(",")[1]);
             prices.add(price);
 
-        }
-        System.out.println(prices);
-
-        for (int x = 0; x < productLst.size(); x++) {
-
             double month=Double.parseDouble(productLst.get(x).split(",")[2]);
             monthlyPayments.add(month);
-
         }
-        System.out.println(monthlyPayments);
+        System.out.println("itemNames= "+itemNames);
+        System.out.println("prices= "+prices);
+        System.out.println("monthly payments= "+monthlyPayments);
 
     }
 }
