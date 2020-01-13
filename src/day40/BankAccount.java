@@ -22,7 +22,7 @@ public class BankAccount {
     }
     //showAccountHolderAccountType
     public void showAccountHolderAccountType() {
-        System.out.println("Account type = "+ accountType);
+        System.out.println("Account holder is "+ accountHolder+ " | Account type is "+ accountType);
     }
 
     //getBalance   return the balance
