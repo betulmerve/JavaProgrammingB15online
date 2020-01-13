@@ -22,7 +22,7 @@ public class Replit_187 {
                 lameDb("1tst#2bla#3foo","none","1","")+"\n"
         );
 
-        System.out.println(lameDb("1test#2bla#3foo","edit","2","bbb"));
+        System.out.println(lameDb("1aaa#2ccc#3bbb#4zzz","delete","4",""));
     }
 
 
@@ -59,18 +59,17 @@ public class Replit_187 {
     {
 
         String[] split=db.split("#");
-
-//        String item1=db.substring(0,db.indexOf("#"));
-//        String item2=db.substring(db.indexOf("#")+1, db.lastIndexOf("#"));
-//        String item3=db.substring(db.lastIndexOf("#"));
         String fin="";
 
         if (op.equals("delete")) {
             split[Integer.parseInt(id)-1]="";
-            fin=split[0]+"#"+split[1]+"#"+split[2];
+            fin=Arrays.toString(split).replace(", ","#").replace("]","").replace("[","");
+            if (fin.endsWith("#")) {
+                fin= fin.substring(0,fin.length()-1);
+            }
         } else if(op.equals("edit")) {
             split[Integer.parseInt(id)-1]=id+data;
-            fin=split[0]+"#"+split[1]+"#"+split[2];
+            fin=Arrays.toString(split).replace(", ","#").replace("]","").replace("[","");
         } else if(op.equals("add")) {
             fin=db+"#"+id+data;
         } else {

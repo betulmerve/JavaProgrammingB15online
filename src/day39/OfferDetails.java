@@ -39,21 +39,68 @@ public class OfferDetails {
         //o4.displayOfferDetails();
 
         o5.location="Florida";
-        o5.company="Great Job";
+//        o5.company="Great Job";
         o5.salary=70000;
         o5.isFullTime=false;
         //o5.displayOfferDetails();
 
+        //how do i add 2K to Verizon offer
+        o4.salary=o4.salary+2000;
+        //o4.salary+=2000;
+        System.out.println("new Verizon salary = " + o4.salary);
 
-        List<Offer> myoffers=new ArrayList<>(Arrays.asList(o1,o2,o3,o4,o5));
+        //set the o5 salary value of sum of all the offers
+        o5.salary=o1.salary+o2.salary+o3.salary+o4.salary;
+        o5.displayOfferDetails();
+        o5.turnFullTime();
 
-        for (Offer eachOffer:myoffers) {
+        //change location with method
+        o5.changeTheLocation("Austin");
+        o5.displayOfferDetails();
 
-            eachOffer.add5000();
+
+        o1.changeAllInfo("Amazon","Virginia",150000,true);
+        //o1.displayOfferDetails();
+
+
+        //if this guy earn more than 100K
+        //move him to Atlanta
+
+        boolean result=o1.is100KOffer();
+        if (result==true) {
+            o1.changeTheLocation("Atlanta");
+        }
+        o1.displayOfferDetails();
+
+
+        System.out.println("-----end-----");
+
+
+        List<Offer> myOffers=new ArrayList<>(Arrays.asList(o1,o2,o3,o4,o5));
+
+        System.out.println("--------for each loop------------");
+
+        for (Offer eachOffer:myOffers) {
+
+            eachOffer.displayOfferDetails();
 
         }
-        for (Offer eachOffer:myoffers) {
 
+        System.out.println("--------for loop------------");
+
+        for (int x = 0; x < myOffers.size(); x++) {
+
+//            Offer each=myOffers.get(x);
+//            each.displayOfferDetails();
+            myOffers.get(x).displayOfferDetails();
+
+        }
+
+        System.out.println("---add5000----");
+
+        for (Offer eachOffer:myOffers) {
+
+            eachOffer.add5000();
             eachOffer.displayOfferDetails();
 
         }
