@@ -19,6 +19,8 @@ public class BikeAction {
         Bike b3=new Bike(3);
         System.out.println("b3.gear = " + b3.gear);
 
+        // I want a Bike object with both
+        // speed and gear set to the value I specify
         Bike b4=new Bike(2,25);
         System.out.println("b4.gear = " + b4.gear);
         System.out.println("b4.speed = " + b4.speed);
