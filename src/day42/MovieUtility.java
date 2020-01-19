@@ -186,9 +186,14 @@ public class MovieUtility {
 
         List<Movie> movieLst = new ArrayList<>();
         //TODO YOUR CODE HERE
-        movieLst.add(new Movie("deneme1",1.5,"action"));
-        movieLst.add(new Movie("deneme2",2.5,"action"));
-        movieLst.add(new Movie("deneme3",3.5,"action"));
+        movieLst.add( new Movie("Joker",2.5,"Drama") );
+        movieLst.add( new Movie("Lord Of The Rings",9.5,"Drama") );
+        movieLst.add( new Movie("Catch me If you can",2.5,"Drama") );
+        movieLst.add( new Movie("Tom & Jerry",2.5,"Family") );
+        movieLst.add( new Movie("Justice League",2.7,"Action") );
+        movieLst.add( new Movie("Jumanji",2.7,"Action") );
+        movieLst.add( new Movie("Boss Baby",2.7,"Family") );
+        movieLst.add( new Movie("The Irishman",2.7,"Crime") );
 
         return movieLst;
     }
