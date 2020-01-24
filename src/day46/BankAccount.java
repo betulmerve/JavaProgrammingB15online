@@ -6,6 +6,9 @@ public class BankAccount {
     long accountNum;
     double balance;
 
+    public BankAccount() {
+
+    }
 
     public BankAccount(String accountHolder, long accountNum, double balance) {
         this.accountHolder = accountHolder;
