@@ -43,10 +43,18 @@ public class FinalVariablePractice {
         //PI in Java
         System.out.println(Math.PI);
 
+        printDoubledNumber(12);
 
+    }
 
+    //anywhere we declare a variable we have option to make it final (including method parameter)
+    //making method parameter final
+    //it will make the method only use the argument user passed without modifying it
 
+    public static void printDoubledNumber(final int x) {
 
+        //x=x*2;
+        System.out.println("x = "+ x*2);
 
     }
 }
