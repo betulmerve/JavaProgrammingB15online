@@ -38,12 +38,20 @@ public class FinalVariablePractice {
         //can not reassing value because it is final
         System.out.println(Student.SCHOOL);
 
+
+        // INTELLIJ AUTOMATICALLY RECOGNIZE CONSTANT (public static final field)
+        // it will automatically make it italic (This can not be done by programmer)
+        // easy way to distinguish between fields and methods is
+        // by looking at () at the end
         System.out.println(Byte.MAX_VALUE);
 
         //PI in Java
         System.out.println(Math.PI);
 
         printDoubledNumber(12);
+
+        final String name = "Michael";
+        // name = "Zehra";  this will not work , can not be reassigned
 
     }
 
