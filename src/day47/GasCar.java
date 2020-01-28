@@ -21,4 +21,8 @@ public class GasCar extends Car {
     public void turn(String direction) {
         System.out.println("turning "+direction);
     }
+
+    //aslinda doCarThing diye de bir method var
+    //ama abstract method olmadgi icin illa cagirmak zorunda degiliz
+    //kullanmasak da oluyor
 }
