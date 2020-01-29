@@ -1,6 +1,7 @@
 package day48;
 
-public class Kangaroo implements Bouncible {
+//a class can implement more than one interface
+public class Kangaroo implements Bouncible,BoxerWithBellyPouch {
 
     String name;
     int jumpDistance;
@@ -10,10 +11,24 @@ public class Kangaroo implements Bouncible {
         this.jumpDistance = jumpDistance;
     }
 
+    // this is the method we have override from Bouncible interface
     @Override
     public void bounce() {
         System.out.println("This "+ name+ " can jump "+ jumpDistance+
                 " meters forward and it would be nice to have "+ GRAVITY+ " gravity");
+    }
+
+    // these two methods , we are overriding from BoxerWIthBellyPouch
+    @Override
+    public void kickBox() {
+        System.out.println("Kangaroo with name "+ name+ " is boxing");
+
+    }
+
+    @Override
+    public void carryChildInThePocket() {
+
+        System.out.println("Kangaroo with name "+name+ " is carrying child in the pocket");
     }
 
     @Override
@@ -27,4 +42,6 @@ public class Kangaroo implements Bouncible {
     public void eat() {
         System.out.println("Kangaroo is eating");
     }
+
+
 }
