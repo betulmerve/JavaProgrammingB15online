@@ -21,6 +21,6 @@ public abstract class Question {
 
     @Override
     public String toString() {
-        return "The question type is " + questionType ;
+        return "The question type is " + questionType +" : " ;
     }
 }

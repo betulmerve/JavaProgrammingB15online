@@ -18,10 +18,11 @@ public class Addition extends Question{
 
     @Override
     public String toString() {
+
         if(calculated) {
-            return num1 + operator +  num2 +" = " + answer;
+            return super.toString()+ num1 + operator +  num2 +" = " + answer;
         } else {
-            return num1 + operator +  num2 + " = ";
+            return super.toString()+ num1 + operator +  num2 + " = ";
         }
     }
 }
