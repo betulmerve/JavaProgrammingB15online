@@ -60,7 +60,7 @@ public class Book {
                 word.equalsIgnoreCase("intro") || word.equalsIgnoreCase("near") ||
                 word.equalsIgnoreCase("of") || word.equalsIgnoreCase("on") ||
                 word.equalsIgnoreCase("to") || word.equalsIgnoreCase("than") ||
-                word.equalsIgnoreCase("via")) {
+                word.equalsIgnoreCase("via") || word.equalsIgnoreCase("at")) {
             return false;
         } else {
             return true;
@@ -105,19 +105,19 @@ public class Book {
      */
     public void setAuthor(String author) {
 
-//        if (author.isEmpty()) {
-//            this.author = "Unknown";
-//            unknownAuthors++;
-//        } else {
-//            String [] a=author.split(" ");
-//            String s="";
-//            for(int i=0;i<a.length-1;i++){
-//                s+=capitalize(a[i])+" ";
-//            }
-//            s+=capitalize(a[a.length-1]);
-//            this.author = s;
-//
-//        }
+
+        if (author.isEmpty()) {
+            this.author="Unknown";
+            unknownAuthors++;
+        } else {
+            String[] arr=author.split(" ");
+            String modified="";
+            for (int x = 0; x < arr.length; x++) {
+                modified=modified+capitalize(arr[x])+" ";
+            }
+            modified=modified.substring(0,modified.length()-1);
+            this.author=modified;
+        }
 
 
     }
@@ -152,7 +152,21 @@ public class Book {
             this.title="";
         }
 
+        String[] arr=title.split(" ");
 
+        String modifiedTitle=capitalize(arr[0])+" ";
+        for (int x = 1; x < arr.length; x++) {
+
+            if (isTitleWord(arr[x])) {
+                modifiedTitle=modifiedTitle+capitalize(arr[x])+" ";
+            } else {
+                modifiedTitle=modifiedTitle+arr[x].toLowerCase()+" ";
+            }
+
+        }
+
+        modifiedTitle=modifiedTitle.substring(0,modifiedTitle.length()-1);
+        this.title=modifiedTitle;
 
     }
 
@@ -162,10 +176,12 @@ public class Book {
      * Format includes author, title, id, pages of the Book object:
      * Book[author=Marufjon T, title=Selenium Cookbook, id=10, pages=300]
      */
+
+
     public String toString() {
 
 
-        return "";
+        return "Book[author="+author+", title="+title+", id="+id+", pages="+pages+"]";
 
     }
 
