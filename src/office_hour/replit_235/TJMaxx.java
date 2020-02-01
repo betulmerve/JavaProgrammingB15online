@@ -18,8 +18,8 @@ public class TJMaxx {
      */
     public TJMaxx() {
         //TODO
-        List<Item> regularItems= new ArrayList<>();
-        List<OnSaleItem> onSaleItems= new ArrayList<>();
+        regularItems= new ArrayList<>();
+        onSaleItems= new ArrayList<>();
 
     }
 
@@ -103,7 +103,8 @@ public class TJMaxx {
      */
     public double getItemPrice(int catalogNumber)
     {
-        double defPrice=0;
+        double defPrice=0.0;
+
         for (Item reg:regularItems) {
             if (reg.getCatalogNumber()==catalogNumber) {
                 defPrice=reg.getPrice();
@@ -128,7 +129,6 @@ public class TJMaxx {
     public OnSaleItem getOnSaleItem(String name)
     {
 
-
         for (OnSaleItem sale:onSaleItems) {
 
             if (sale.getName().equals(name)) {
@@ -147,21 +147,19 @@ public class TJMaxx {
      */
     public void removeItem(int catalogNumber) {
 
-        for (Item reg:regularItems) {
-
-            if (reg.getCatalogNumber()==catalogNumber) {
-                regularItems.remove(reg);
+        for (int x = 0; x < regularItems.size(); x++) {
+            if (regularItems.get(x).getCatalogNumber()==catalogNumber) {
+                regularItems.remove(regularItems.get(x));
+                x--;
             }
-
+        }
+        for (int x = 0; x < onSaleItems.size(); x++) {
+            if (onSaleItems.get(x).getCatalogNumber()==catalogNumber) {
+                onSaleItems.remove(onSaleItems.get(x));
+                x--;
+            }
         }
 
-        for (OnSaleItem sale:onSaleItems) {
-
-            if (sale.getCatalogNumber()==catalogNumber) {
-                onSaleItems.remove(sale);
-            }
-
-        }
     }
 
     /**
@@ -177,7 +175,9 @@ public class TJMaxx {
 
         for (Item reg:regularItems) {
             if (reg.getCatalogNumber()==catalogNumber) {
-                reg.setQuantity(reg.getQuantity()-1);
+                if (reg.getQuantity()>1) {
+                    reg.setQuantity(reg.getQuantity() - 1);
+                }
                 if (reg.getQuantity()==0) {
                     removeItem(catalogNumber);
                 }
@@ -186,7 +186,9 @@ public class TJMaxx {
 
         for (OnSaleItem sale:onSaleItems) {
             if (sale.getCatalogNumber()==catalogNumber) {
-                sale.setQuantity(sale.getQuantity()-1);
+                if (sale.getQuantity()>1) {
+                    sale.setQuantity(sale.getQuantity() - 1);
+                }
                 if (sale.getQuantity()==0) {
                     removeItem(catalogNumber);
                 }

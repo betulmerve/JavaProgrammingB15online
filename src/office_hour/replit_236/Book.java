@@ -143,6 +143,14 @@ public class Book {
      */
     public void setTitle(String title) {
 
+        if (!title.contains(" ")) {
+            capitalize(title);
+            this.title=title;
+        }
+
+        if (title.isEmpty()) {
+            this.title="";
+        }
 
 
 
@@ -169,7 +177,7 @@ public class Book {
     public static int getUnknownAuthors(){
 
 
-        return 0;
+        return unknownAuthors;
     }
 
     /**
@@ -179,7 +187,7 @@ public class Book {
     public int getPages() {
 
 
-        return 0;
+        return pages;
     }
 
     /**
@@ -188,7 +196,7 @@ public class Book {
      */
     public void setPages(int pages) {
 
-
+        this.pages=pages;
 
     }
 
@@ -197,7 +205,7 @@ public class Book {
      */
     public String getAuthor() {
 
-        return null;
+        return author;
     }
 
 
@@ -207,7 +215,7 @@ public class Book {
     public String getTitle() {
 
 
-        return null;
+        return title;
     }
 
 
@@ -217,14 +225,14 @@ public class Book {
     public int getId() {
 
 
-        return -1;
+        return id;
     }
     /**
      * public setter method for private id
      */
     public void setId(int id) {
 
-
+        this.id=id;
 
     }
 

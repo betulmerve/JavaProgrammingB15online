@@ -20,7 +20,7 @@ public class Drink {
     @Override
     public String toString() {
         //TODO
-        return "Drink{name='" + name + '\'' + ", cost=" +cost + ", quantity=" +quantity;
+        return "Drink{name='" + name + '\'' + ", cost=" +cost + ", quantity=" +quantity+"}";
     }
 
     public String getName() {

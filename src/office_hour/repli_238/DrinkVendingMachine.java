@@ -1,5 +1,7 @@
 package office_hour.repli_238;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DrinkVendingMachine extends VendingMachine {
@@ -34,6 +36,7 @@ public class DrinkVendingMachine extends VendingMachine {
      */
     public DrinkVendingMachine(Drink... drinksParam) {
         //TODO
+        this.drinks=new ArrayList<Drink>(Arrays.asList(drinksParam));
 
 
     }
@@ -61,9 +64,15 @@ public class DrinkVendingMachine extends VendingMachine {
     @Override
     public void select(int drinkNumber) {
 
-//        if (drinkNumber<0 || drinkNumber>drinks.size()-1) {
-//            isSelected=false;
-//        }
+        if (drinkNumber<0 || drinkNumber>drinks.size()-1) {
+            isSelected=false;
+        }
+        if (drinks.get(drinkNumber).getQuantity()<=0) {
+            isSelected=false;
+        }
+        current=drinks.get(drinkNumber);
+        amountLeftToPay=current.getCost();
+        isSelected=true;
     }
 
 
@@ -89,7 +98,19 @@ public class DrinkVendingMachine extends VendingMachine {
 
     @Override
     public double pay(double money) {
-        return 0;
+        if (isSelected=false) {
+            return 0;
+        } else {
+            amountLeftToPay=amountLeftToPay-money;
+            current.setQuantity(current.getQuantity()-1);
+            if (amountLeftToPay<0) {
+                change=-amountLeftToPay;
+                return amountLeftToPay;
+            }
+            change=0;
+            return amountLeftToPay;
+        }
+
     }
 
 
@@ -113,7 +134,11 @@ public class DrinkVendingMachine extends VendingMachine {
 
     @Override
     public double returnChange() {
-        return 0;
+        double temp=change;
+        change=0;
+        amountLeftToPay=0;
+        return temp;
+
     }
 
 
@@ -130,9 +155,12 @@ public class DrinkVendingMachine extends VendingMachine {
     //TODO: implement cancel method
 
 
-
     @Override
     public void cancel() {
+        current=null;
+        amountLeftToPay=0;
+        isSelected=false;
+        change=0;
 
     }
 
