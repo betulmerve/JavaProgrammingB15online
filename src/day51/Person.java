@@ -1,6 +1,9 @@
 package day51;
 
-public class Person {
+//Person IS-A Comparable
+//yes because it implements Comparable interface
+//it's a inheritance | IS-A | Super-Sub relationship
+public class Person implements Comparable<Person> {
     String name;
     int age;
 
@@ -9,15 +12,34 @@ public class Person {
         this.age = age;
     }
 
+    //now this become a natural order for comparing Person object
+    @Override
     public int compareTo(Person otherPerson) {
 
-        if (this.age==otherPerson.age) {
-            return 0;
-        } else if(this.age>otherPerson.age) {
-            return 1;
-        } else {
-            return -1;
-        }
+//        if (this.age>otherPerson.age) {
+//            return 1;
+//        } else if(this.age<otherPerson.age) {
+//            return -1;
+//        } else {
+//            return 0;
+//        }
+        //modify this method to make your natural order , comparing by name(first character)
+        //then use it with sort method
+
+        //azalan sira ile olsun istersen >  < yerlerini degistir
+
+//        if (this.name.charAt(0)>otherPerson.name.charAt(0)) {
+//            return 1;
+//        } else if (this.name.charAt(0)<otherPerson.name.charAt(0)) {
+//            return -1;
+//        } else {
+//            return 0;
+//        }
+        //Since String is comparable itself it has method to already compare
+        // 2 String objects , so we are just directly using it
+        return this.name.compareTo(otherPerson.name);
+
+
     }
 
     @Override
@@ -27,4 +49,6 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
+
+
 }
