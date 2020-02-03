@@ -17,5 +17,28 @@ public class ShapePolymorphism {
         // How do I know what is the actual object type
         System.out.println(s1.getClass().getSimpleName());
 
+        Shape s2=new Rectangle("Book", 10, 5);
+        printAnyShapeArea(s2);
+        printAnyShapeArea(new Square("Bob",6));
+        drawShape3Times(s2);
+
+    }
+
+
+    // create a method that accept any Shape and print out the calculated area
+    public static void printAnyShapeArea(Shape anyShape) {
+
+        anyShape.calculateArea();
+        System.out.println(anyShape.name+ "'s area is "+ anyShape.area);
+    }
+
+    //create a static method called drawShape3Times
+    //it accepts 1 shape parameter
+    //return nothing
+
+    public static void drawShape3Times(Shape anyShape) {
+        anyShape.draw();
+        anyShape.draw();
+        anyShape.draw();
     }
 }
