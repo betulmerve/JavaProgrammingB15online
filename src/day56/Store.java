@@ -1,18 +1,30 @@
 package day56;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
 
+    String name;
     List<Product> productList;
 
     public Store() {
-        this.productList=null;
+        this.name="Cybertek Store";
+        this.productList=new ArrayList<>();
     }
 
-    public Store(List<Product> productList) {
-        this();
-        this.productList.addAll(productList);
+    public Store(String name, List<Product> otherList) {
+        this(); //calling no arg constructor
+        this.name=name;
+        this.productList.addAll(otherList);
+    }
+
+    @Override
+    public String toString() {
+        return "Store{" +
+                "name='" + name + '\'' +
+                ", productList=" + productList +
+                '}';
     }
 
     public void addProduct(Product p) {
@@ -40,13 +52,9 @@ public class Store {
 
     public int sumOfAll() {
         int sum=0;
-
         for (Product each:productList) {
-
             sum=sum+each.getPrice();
-
         }
-
         return sum;
     }
 }
