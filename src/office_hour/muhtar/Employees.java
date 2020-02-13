@@ -109,8 +109,6 @@ class BankofAzerbaijan{
 
         System.out.println("st = " + st);
 
-        System.out.println("st = " + st);
-
 
         for (Testers each:testersList) {
             System.out.println("each.employeeName = " + each.employeeName);
