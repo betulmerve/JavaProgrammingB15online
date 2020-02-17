@@ -19,7 +19,8 @@ public class Utils {
 
     public static String reverseLetters(String word) {
 //            word="ab,cd!";
-        //reversed="!dc,ba";
+        //reversed="dcba";
+        //result="dc,ba!";
         String reversed="";
         String result="";
 
@@ -28,8 +29,20 @@ public class Utils {
                 reversed=reversed+word.charAt(x);
             }
         }
-
         System.out.println(reversed);
+
+        int indexOfReversed=0;
+
+        for (int y = 0; y < word.length(); y++) {
+
+            if (Character.isLetter(word.charAt(y))) {
+                result=result+reversed.charAt(indexOfReversed);
+                indexOfReversed++;
+            } else {
+                result=result+word.charAt(y);
+            }
+
+        }
 
 
         return result;
