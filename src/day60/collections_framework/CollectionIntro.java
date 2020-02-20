@@ -52,4 +52,21 @@ public class CollectionIntro {
     }
 
 
+
+    /*
+     * The word Collection everywhere :
+     *
+     *
+     * Collection Framework -->> referring entire things , entire topic
+     *
+     * Collection Interface --->> one interface under the entire Collection Framework
+     *
+     * Collections class  -->> (it has s at the end, just like Array and Arrays )
+     *                   -->>  is a utility class with many static methods
+     *                 for example : Collections.sort(your collection object1)
+     *
+     *
+     * */
+
+
 }

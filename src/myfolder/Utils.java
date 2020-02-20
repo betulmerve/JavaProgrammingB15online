@@ -24,6 +24,9 @@ public class Utils {
         String reversed="";
         String result="";
 
+
+
+
         for (int x = word.length()-1; x >=0 ; x--) {
             if (Character.isLetter(word.charAt(x))) {
                 reversed=reversed+word.charAt(x);
@@ -46,6 +49,9 @@ public class Utils {
 
 
         return result;
+
+
+
 
     }
 
